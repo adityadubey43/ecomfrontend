@@ -1,0 +1,117 @@
+<div class="w-75 p-3 mx-4">
+  <form (ngSubmit)="submitForm()" #blogForm="ngForm">
+    <div class="form-group mt-4">
+      <label for="title">Enter the title *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        id="title"
+        required
+        placeholder="Enter The Title"
+        [(ngModel)]="formData.title"
+      />
+    </div>
+    <div class="form-group mt-4">
+      <label for="snippet">Enter the snippet *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="snippet"
+        id="snippet"
+        required
+        placeholder="Enter The snippet"
+        [(ngModel)]="formData.snippet"
+      />
+    </div>
+    <div class="form-group mt-4">
+      <label for="title">Thumbnails for the blog *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="img"
+        id="img"
+        required
+        placeholder="Enter The Title"
+        [(ngModel)]="formData.img"
+      />
+    </div>
+    <div class="form-group mt-4">
+      <label for="title">Select Category*</label>
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        id="option"
+        name="option"
+        [(ngModel)]="formData.category"
+      >
+        <option selected disabled>Choose the category of blog</option>
+        <option value="Social">Social Media</option>
+        <option value="product">Products</option>
+        <option value="product">Business</option>
+        <option value="yoga">Yoga</option>
+        <option value="womenwellness">Women's wellness</option>
+        <option value="parenthood">Parenthood</option>
+        <option value="mentalhealth">Mental Health</option>
+      </select>
+    </div>
+
+    <!-- Replace the textarea with the TinyMCE editor -->
+    <div class="form-group mt-4">
+      <label for="content">Enter the blog body</label>
+      <editor
+        apiKey="cdh2t7ow61ssd5e4kzg3qmh3p567ontidxcqtqg56eya8twc"
+        [init]="{
+          selector: 'textarea#basic-example',
+          height: 500,
+          plugins: [
+            'advlist',
+            'autolink',
+            'lists',
+            'link',
+            'image',
+            'charmap',
+            'preview',
+            'anchor',
+            'searchreplace',
+            'visualblocks',
+            'code',
+            'fullscreen',
+            'insertdatetime',
+            'media',
+            'table',
+            'help',
+            'wordcount'
+          ],
+          toolbar:
+            'undo redo | blocks | ' +
+            'bold italic backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'removeformat | help',
+          content_style:
+          'body { font-family: Helvetica, Arial, sans-serif; font-size: 16px; }'
+        }"
+        [(ngModel)]="formData.body"
+        name="body"
+        required
+      ></editor>
+
+      <div class="form-group mt-4">
+        <label for="content">Enter the Keywords</label>
+        <input
+          type="text"
+          class="form-control"
+          name="snippet"
+          id="snippet"
+          required
+          placeholder="Enter The Keywords"
+          [(ngModel)]="formData.keywords"
+        />
+      </div>
+    </div>
+
+    <!-- Repeat similar structure for other fields if needed -->
+
+    <button type="submit" class="btn btn-primary mt-1">Submit</button>
+  </form>
+</div>

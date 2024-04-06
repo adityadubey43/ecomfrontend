@@ -1,0 +1,31 @@
+<app-logedinnav></app-logedinnav>
+<h2>Confirm and Pay</h2>
+<div *ngIf="product" class="container">
+    <div class="confirm-and-pay-container">     
+      <div class="invoice-details">
+        <div class="user-details">
+          <h3>Customer Details-:</h3>
+          <p><strong>Name:</strong> {{ name }}</p>
+          <p><strong>Email:</strong> {{ email }}</p>
+          <p><strong>Mobile Number:</strong> {{ mob }}</p>
+        </div>
+        
+        <div class="product-details">
+          <h3>Product Details:</h3>
+          <h2>{{ product.productName }}</h2>
+          <p>{{ product.productDesc }}</p>
+          <p *ngIf="(country() == 'India') "><strong>Price per Unit:</strong> ₹ {{ product.Indprice }}</p>
+        <p *ngIf="(country() == 'USA') "><strong>Price per unit:</strong> $ {{ product.USAprice }}</p>
+        <p *ngIf="(country() == 'UK') "><strong>Price per unit:</strong> % {{ product.UKprice }}</p>
+
+        </div>
+
+      </div>
+      <h5 mt-5 *ngIf="(country() == 'India') "><strong>Total Price For {{duration}} Units: </strong> ₹{{ totalPrice }}</h5>
+      <h5 mt-5 *ngIf="(country() == 'USA') "><strong>Total Price For {{duration}} Units: </strong> ${{ totalPrice }}</h5>
+      <h5 mt-5 *ngIf="(country() == 'UK') "><strong>Total Price For {{duration}} Units: </strong> %{{ totalPrice }}</h5>
+    </div>
+  </div>
+<div class="container"  >
+    <div #paypal></div>
+</div>

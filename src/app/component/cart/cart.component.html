@@ -1,0 +1,34 @@
+<!-- cart-item.component.html -->
+<div class="cart" *ngIf="cartItems">
+  <div
+    *ngFor="let item of cartItems"
+    class="container margin-top-100px product-container"
+  >
+    <div class="product-image">
+      <img [src]="item.productId.productImages[0]" alt="" srcset="" />
+    </div>
+    <div class="product-details">
+      <p class="product-name">{{ item.productId.productName }}</p>
+      <p class="quantity">Quantity: {{ item.quantity }}</p>
+    </div>
+    <div>
+      <button
+        (click)="buyProduct(item.productId, item.quantity)"
+        class="btn btn-primary"
+      >
+        Buy Now
+      </button>
+      <button (click)="removeProduct(item.productId)" class="btn btn-danger">
+        Remove Item
+      </button>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="cartItems.length == 0">
+  <div>
+    <h2>Cart is empty</h2>
+    <div class="margin-top-100px">
+      <h3>Find someting to add into the cart <a routerLink="/">See More</a></h3>
+    </div>
+  </div>
+</div>

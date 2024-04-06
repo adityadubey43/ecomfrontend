@@ -1,0 +1,84 @@
+<nav class="navbar darkmo navbar-expand-lg container-fluid ">
+    <div class="container-fluid">
+        <div class="logoclass" *ngIf='!isloggedin()'>
+            <a routerLink="/"><img class="logo" src="../../../assets/images/logoconversion.png" alt=""></a>
+            <a [ngClass]="" routerLink="/" class="logotext">Klasik_Bags</a>
+        </div>
+        <div class="logoclass" *ngIf='isloggedin()'>
+            <a routerLink="/"><img class="logo" src="../../../assets/images/logoconversion.png" alt=""></a>
+            <a [ngClass]="" routerLink="/" class="logotext">Klasik_Bags</a>
+        </div>
+        <button class="toggle-btn  "  type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div [ngClass]="" class="collapse  collpseitems navbar-collapse justify-content-around" id="navbarSupportedContent">
+
+            <div >
+                <ul class="navbar-nav margin-left-10rem ">
+                   
+                    <li class="nav-item">
+                        <a [ngClass]="" href="#services">
+                            <h5>Products</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [ngClass]="" routerLink="/pages">
+                            <h5>Categories</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item"  *ngIf="isloggedin() && !isAdmin()">
+                        <a [ngClass]="" routerLink="/purchase-details">
+                            <h5>Purchase Details</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item"  *ngIf="isloggedin() && isAdmin()">
+                        <a [ngClass]="" routerLink="/dashboard">
+                            <h5>Dashboard</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item" *ngIf="isloggedin() && isAdmin()">
+                        <a [ngClass]="" routerLink="/add-blogs">
+                            <h5>Add Blogs</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item"  *ngIf="isloggedin() && isAdmin()">
+                        <a [ngClass]="" routerLink="/addproduct">
+                            <h5>Add Products</h5>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <ul class="navbar-nav margin-left-10rem">
+                <li class="nav-item">
+                    <a [ngClass]="" routerLink="/cart">
+                        <img class="cartimg" src="../../../assets/images/644930-200.png" alt="">
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf='!isloggedin()'>
+                    <a [ngClass]="" routerLink="/login">
+                        <h5 class="mx-2 ">Login</h5>
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf='!isloggedin()'>
+                    <a [ngClass]="" routerLink="/register">
+                        <h5 class="mx2 ">Register</h5>
+                    </a>
+                </li>    
+            </ul>
+        </div>
+        <div>
+            <div class="darktoggle mt-3">
+                <span>Dark Mode </span>
+                <input type="checkbox" (click)="toggle()" id="toggle" />
+                <label for="toggle"></label>
+            </div>
+            
+            <app-logedinnav *ngIf='isloggedin()'></app-logedinnav>
+
+        </div>
+    </div>
+
+</nav>

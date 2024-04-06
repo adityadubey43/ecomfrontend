@@ -1,0 +1,7 @@
+<div [ngClass]="{darkmo: darkmo==true }">
+    <app-nav class="navabsolute" (Darkmode)="GetData($event)" ></app-nav>
+    <router-outlet ></router-outlet>
+    <app-footer></app-footer>
+    
+    <!-- <h1 *ngFor="let info of names">hiiiiii {{info.name}}, {{info.desc}}</h1> -->
+</div>

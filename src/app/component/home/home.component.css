@@ -1,0 +1,220 @@
+.full-image-container{
+
+}
+.full-image{
+    width: 100%;
+    height: 700px;
+    border-radius: 0px 0px 45px 45px;
+}
+.text-inside-full-image{
+    position: absolute;
+    top:50%;
+    left: 45%;
+    text-align: center;
+    
+
+}
+h2{
+    font-size: 46px;
+}
+
+.card1{
+    width: 375px;
+    height: 475px;
+    border-radius: 20px;
+    position: relative;
+    top: -50px;
+    overflow: hidden;
+}
+.card2{
+    width: 340px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+.image-bag-hover{
+    width: 120%;
+}
+.image-bag-hover:hover{
+   width: 140%; 
+   transition: 2s ease-in-out;
+}
+.image-bag-hover:not(:hover) {
+    width: 120%; /* Define the default width again */
+    transition: 2s ease-out; /* Define a transition for smooth easing out */
+}
+
+.card3{
+    width: 375px;
+    height: 475px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    top: -50px
+}
+.card-body-here{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+.card-body-here2{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+     /* Adjust opacity as needed */
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover{
+    color: rgb(255, 160, 160);
+}
+
+
+
+.contact-section {
+    padding-top: 100px;
+    background: rgb(255, 188, 0);
+    padding-bottom: 100px;
+    /* background: linear-gradient(0deg, rgba(255,188,0,1) 0%, rgba(255,255,255,1) 100%); */
+}
+
+
+
+.listing-features {
+    border: none;
+    position: relative;
+    margin: 10px;
+    width: 400px;
+    border-radius: 10px;
+    height: 264px;
+    overflow: hidden;
+    border: 1px solid white;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.cete-desc-link{
+    position: absolute;
+    background: white;
+    color: #04322f;
+    /* top: 10px; */
+    padding: 20px;
+    border-radius: 26px;
+    width: 80%;
+    left: 20px;
+    bottom: 10px;
+}
+
+.listing-features:hover {
+    background-color: #77a4ff;
+    padding: 25px 20px 20px 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.color-full-section {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.width-sector {
+    width: 560px;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.clients-testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sections-cards-partner {
+    border: none;
+    position: relative;
+    margin: 10px;
+    width: 800px;
+    border-radius: 20px;
+    padding: 30px 20px 20px 20px;
+    height: 500px;
+    overflow: hidden;
+    color: black;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.identity {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    left: 50px;
+    top: 30px;
+}
+
+.profile-photo img {
+    border-radius: 50%;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.next-previous {
+    cursor: pointer;
+    margin-left: 10px;
+}
+.controls {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+.offering-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+.offering{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.left{
+   color: black;
+}
+.right{
+color: black;
+}
+
+
+@media screen and (max-width: 600px) {
+    .width-sector {
+        width: 280px;
+        padding-bottom: 20px;
+    }
+
+    .sections-cards-partner {
+
+        height: 560px;
+
+    }
+}

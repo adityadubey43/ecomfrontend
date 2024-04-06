@@ -1,0 +1,12 @@
+
+
+.darkmo{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white !important;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+

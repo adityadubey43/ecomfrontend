@@ -1,0 +1,28 @@
+<app-logedinnav></app-logedinnav>
+<div *ngIf="product" class="product-details-container">
+    <div class="product-image">
+        <img [src]="product.productImages[0]" alt="Product Image" />
+    </div>
+    <div class="product-details">
+        <h2>{{ product.productName }}</h2>
+        <p>{{ product.productDesc }}</p>
+        <p *ngIf="(country() == 'India') "><strong>Price:</strong> ₹ {{ product.Indprice }}</p>
+        <p *ngIf="(country() == 'USA') "><strong>Price:</strong> $ {{ product.USAprice }}</p>
+        <p *ngIf="(country() == 'UK') "><strong>Price:</strong> % {{ product.UKprice }}</p>
+
+        <p><strong>Category:</strong> {{ product.category }}</p>
+        <!-- Add more fields here as needed -->
+
+        <p><strong>Quantity:</strong></p>
+        <div>
+            <button (click)="changeQuantity(-1)">-</button>
+            <span>{{ selectedQuantity }} Units</span>
+            <button (click)="changeQuantity(1)">+</button>
+        </div>
+        <button class="mt-3" (click)="cnfbuyProduct(product)">Buy Now</button>
+        
+    </div>
+</div>
+<div class="container" >
+    <div #paypal></div>
+</div>

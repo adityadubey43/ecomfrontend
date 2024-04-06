@@ -1,0 +1,42 @@
+<div class="lead-form-container">
+    <div class="heading">
+        <h2 class="text-center">Get a Free Business Audit!</h2>
+        <p>Let us increase the search engine rank and traffic of your Business
+        </p>
+    </div>
+    <form (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="formData.email" [email]="true" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Mobile Number:</label>
+            <input type="tel" id="email" name="mobilenumber" [(ngModel)]="formData.mob" required (focus)="phoneTouched = true">
+            <div class="error" *ngIf="phoneTouched && !isValidPhoneNumber()">Please enter a valid 10-digit phone number without 0 or country code.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="message">What Are You Looking For:</label>
+            <textarea id="message" name="message" [(ngModel)]="formData.message" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="text">Website URL</label>
+            <input type="text" id="url" name="url" [(ngModel)]="formData.messageurl" required>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="error">
+            <h5>
+              {{Cotacterror}}
+            </h5>
+           
+        </div>
+    </form>
+</div>

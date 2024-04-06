@@ -1,0 +1,29 @@
+footer {
+    background-color: #1d1b2d;
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 0 0 30%;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+}

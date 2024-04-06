@@ -1,0 +1,17 @@
+.content {
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .blog-content img {
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,34 @@
+<div class="purchasedproduct container">
+    <h2>Purchase Details</h2>
+</div>
+    <div class="table-responsive container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Description</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Transaction ID</th>
+                    <th>Purchase Date</th>
+                    <th>Expiry Date</th>
+                    <!-- <th>Status</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let purchase of purchases">
+                    <td>{{ purchase.product.productName }}</td>
+                    <td>{{ purchase.product.productDesc }}</td>
+                    <td>{{ purchase.quantity }}</td>
+                    <td>{{ purchase.totalPrice }}</td>
+                    <td>{{ purchase.transactionID }}</td>
+                    <td>{{ purchase.purchaseDate | date:'medium' }}</td>
+                    <td>{{ purchase.endDate | date:'medium' }}</td>
+                    <!-- <td *ngIf="purchase.endDate<currentDate">Expired</td>
+                    <td #elseBlock>Active</td> -->
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+

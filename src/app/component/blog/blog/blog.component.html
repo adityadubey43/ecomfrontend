@@ -1,0 +1,17 @@
+<div class="container mb-4">
+  <div class="d-flex margin-top-100px justify-content-around flex-wrap align-items-center " *ngFor="let blog of Blogs">
+    <div class="image-cont">
+      <img class="image" [src]="blog.img" alt="" />
+    </div>
+    <div class="content mt-4">
+      <h4>{{ blog.title }}</h4>
+      <p>{{ blog.snippet }}</p>
+      <!-- <h4>{{blog._id}}</h4> -->
+      <button (click)="getBlog(blog.title, blog._id)" class="btn btn-primary">
+        Read More
+      </button>
+    </div>
+
+    <!-- <h6 [innerHTML]="blog.body"></h6> -->
+  </div>
+</div>

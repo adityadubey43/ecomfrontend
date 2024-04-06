@@ -1,0 +1,149 @@
+<div class="full-image-container ">
+    <img class="full-image" src="../../../assets/images/bag 1.png" alt="">
+    <div class="text-inside-full-image">
+        <h4 class="mb-3">
+            <b>A Bags For You</b>
+
+        </h4>
+        <p class="mb-3">Find <b>Budget Friendly</b> Bags </p>
+        <a href="#contact" class="btn btn-primary ">Get Started</a>
+    </div>
+</div>
+
+<div class=" container margin-top-100px d-flex flex-wrap justify-content-center">
+    <div class="d-flex w-100 flex-wrap justify-content-between">
+        <h2>
+            <b>Explore By Categories</b>
+        </h2>
+        <h4>
+            View More ->
+        </h4>
+    </div>
+    <div class=" mt-5 containe d-flex flex-wrap justify-content-center">
+        <div class="listing-features color1">
+            <img class="w-100" src="../../../assets/images/pexels-nappy-1058959.jpg" alt=""> 
+            <h4 class="cete-desc-link">Best seller</h4>          
+        </div>
+        <div class="listing-features color1">
+            <img class="w-100" src="../../../assets/images/pexels-biuro-tłumaczeń-63778.jpg" alt="">
+            <h4 class="cete-desc-link">Best seller</h4>           
+        </div>
+        <div class="listing-features color1">
+            <img class="w-100" src="../../../assets/images/pexels-ebeen-6014388.jpg" alt="">  
+            <h4 class="cete-desc-link">Trendy</h4>           
+         
+        </div>
+    </div>
+</div>
+
+<div class="flex-column container margin-top-100px text-center">
+    <h2>With our versatile product range, <br>we are here to help you go places in style,<br> without compromises.</h2>
+    <a routerLink="/product"><h4 class=" mt-3">Learn More.</h4></a>
+</div>
+
+<div class="container margin-top-100px">
+    <div class="card1">
+        <img class="w-100" src="../../../assets/images/pexels-ebeen-6014388.jpg" alt="">
+        <div class="card-body-here">
+            <a routerLink="/product"><h3><b>
+                clasic bag Elegant Style
+            </b></h3></a>
+            <h4>Best bags to buy</h4>
+            
+        </div>
+    </div>
+    <div class="card2">
+        <img class=" image-bag-hover" src="../../../assets/images/pexels-andrea-piacquadio-935760.jpg" alt="">
+        <div class="card-body-here">
+            <a routerLink="/product"><h3><b>
+                clasic bag Elegant Style
+            </b></h3></a>
+            <a routerLink="/"><h4>View All</h4></a>
+        </div>
+    </div>
+    <div class="card3">
+        <img class="w-100" src="../../../assets/images/pexels-ebeen-6014388.jpg" alt="">
+        <div class="card-body-here">
+            <a routerLink="/product"><h3><b>
+                clasic bag Elegant Style
+            </b></h3></a>
+            <h4>Best bags to buy</h4>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="container margin-top-100px">
+    <div class="d-flex flex-wrap justify-content-between align-items-center color-full-section ">
+        <!-- <div class="secondsection create-img">
+            <img class="shadow1 width-sector" src="../../../assets/images/2167743.png" alt="">   
+        </div> -->
+        <div class="secondsection">
+            <img class="width-sector" src="../../../assets/images/New Project.png" alt="">   
+        </div>
+        <div class="firstsection">
+            <!-- <h1 class="mb-3 title">
+                We Turn Your Ideas into <br> Revenue
+            </h1> -->
+            <h1 class="mb-4 title">Customized Bags From skilled artists</h1>
+            <h4 class="mb-3">
+
+                Best crafted Pice of Art From  local designers in the world, handmade with love and care by passionate artist who are always
+
+            </h4>
+            <h5>
+                Pricing: Starting At $199.
+            </h5>
+            <a href="#services" class="btn btn-primary ">Buy Now</a>
+        </div>
+    </div>
+</div>
+
+<app-product></app-product>
+<!-- 
+<div class="container">
+    <div class="card-service">
+        <div class="card">
+            <div class="image-container">
+                <img src="../../../assets/images/developer.png" alt="Product Image">
+            </div>
+            <div class="bottom-section">
+                <div class="white-part">
+                    <h5>Web Development</h5>
+                    <p>$999/-</p>
+                    <a href="#contact" class="btn btn-primary  ">Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container  margin-top-100px">
+        <div class="clients-testimonials">
+            <div class="sections-cards-partner color1" *ngIf="testimonials.length > 0" [@slideAnimation]>
+              <div class="profile-photo">
+                <img [src]="testimonials[currentIndex].profilePicture" alt="User Profile Picture" class="Profile Picture">
+              </div>
+              <div class="review">
+                <h5 class="text-center">" {{ testimonials[currentIndex].review }} "</h5>
+              </div>
+              <div class="identity">
+                <h6>{{ testimonials[currentIndex].Name }}</h6>
+                <p>{{ testimonials[currentIndex].Designation }}</p>
+              </div>
+              <div class="controls">
+                <a (click)="showPrevious()" class="next-previous">Previous</a>
+                <a (click)="showNext()" class="next-previous">Next</a>
+              </div>
+            </div>
+          </div>                
+</div>
+
+<div class="contact-section margin-top-100px">
+   
+    <div class="container "  id="contact" >
+      
+        <app-contact-form></app-contact-form>
+      
+    </div>
+</div>

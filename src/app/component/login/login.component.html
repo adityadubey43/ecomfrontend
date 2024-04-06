@@ -1,0 +1,28 @@
+<div class="lead-form-container">
+    <form (ngSubmit)="login()">
+        
+
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="formData.emailid" [email]="true" required>
+            <div class="error">{{messageemail}}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <div class="password-input-container">
+                <input type="{{ showPassword ? 'text' : 'password' }}" id="password" name="password" [(ngModel)]="formData.password" required>
+                <p type="button" class="toggle-password" (click)="togglePasswordVisibility()">
+                    {{passshowtext}}
+                </p>
+            </div>
+            <div class="error">{{messagepass}}</div>
+        </div>
+
+        
+
+        <button type="submit">Submit</button>
+        
+    </form>
+</div>

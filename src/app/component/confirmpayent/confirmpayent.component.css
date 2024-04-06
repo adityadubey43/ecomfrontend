@@ -1,0 +1,46 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .confirm-and-pay-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .confirm-and-pay-container h2 {
+    margin-top: 0;
+  }
+  
+  .invoice-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .user-details,
+  .product-details {
+    flex-basis: 48%;
+  }
+  
+  .user-details h3,
+  .product-details h3 {
+    margin-top: 0;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

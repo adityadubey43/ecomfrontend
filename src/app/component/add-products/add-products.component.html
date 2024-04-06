@@ -1,0 +1,30 @@
+<app-logedinnav></app-logedinnav>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <label for="productName">Product Name</label>
+  <input type="text" id="productName" formControlName="productName">
+
+  <label for="productDesc">Product Description</label>
+  <textarea id="productDesc" formControlName="productDesc"></textarea>
+
+  <label for="productImages">Product Images</label>
+  <input type="text" id="productImages" formControlName="productImages">
+
+  <label for="price">IndPrice</label>
+  <input type="number" id="price" formControlName="Indprice">
+
+  <label for="price">USAPrice</label>
+  <input type="number" id="price" formControlName="USAprice">
+
+  <label for="price">UKPrice</label>
+  <input type="number" id="price" formControlName="UKprice">
+
+  <label for="category">Category</label>
+  <input type="text" id="category" formControlName="category">
+
+  <label for="stockQuantity">Stock Quantity</label>
+  <input type="number" id="stockQuantity" formControlName="stockQuantity">
+
+  <button type="submit" [disabled]="!productForm.valid" class="btn btn-primary">Submit</button>
+</form>
+  
