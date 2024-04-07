@@ -21,7 +21,7 @@ import { AdminComponent } from './component/admin/admin.component';
 import { CartComponent } from './component/cart/cart.component';
 
 const routes: Routes = [
-  {path: 'pages', component: PagesComponent},
+  {path: 'products', component: PagesComponent},
   {path: '', component: HomeComponent},
   {path: 'thankyou', component: ThankyouComponent},
   {path: 'register', component: RegisterComponent},

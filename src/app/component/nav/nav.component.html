@@ -1,12 +1,12 @@
 <nav class="navbar darkmo navbar-expand-lg container-fluid ">
     <div class="container-fluid">
         <div class="logoclass" *ngIf='!isloggedin()'>
-            <a routerLink="/"><img class="logo" src="../../../assets/images/logoconversion.png" alt=""></a>
-            <a [ngClass]="" routerLink="/" class="logotext">Klasik_Bags</a>
+            <a href="https://ecombags.netlify.app/"><img class="logo" src="../../../assets/images/logoconversion.png" alt=""></a>
+            <a [ngClass]="" href="https://ecombags.netlify.app/" class="logotext">Klasik_Bags</a>
         </div>
         <div class="logoclass" *ngIf='isloggedin()'>
-            <a routerLink="/"><img class="logo" src="../../../assets/images/logoconversion.png" alt=""></a>
-            <a [ngClass]="" routerLink="/" class="logotext">Klasik_Bags</a>
+            <a href="https://ecombags.netlify.app/"><img class="logo" src="../../../assets/images/logoconversion.png" alt=""></a>
+            <a [ngClass]="" href="https://ecombags.netlify.app/" class="logotext">Klasik_Bags</a>
         </div>
         <button class="toggle-btn  "  type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -19,12 +19,12 @@
                 <ul class="navbar-nav margin-left-10rem ">
                    
                     <li class="nav-item">
-                        <a [ngClass]="" href="#services">
+                        <a [ngClass]="" routerLink="/products">
                             <h5>Products</h5>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a [ngClass]="" routerLink="/pages">
+                        <a [ngClass]="" routerLink="/products">
                             <h5>Categories</h5>
                         </a>
                     </li>
@@ -54,7 +54,18 @@
             <ul class="navbar-nav margin-left-10rem">
                 <li class="nav-item">
                     <a [ngClass]="" routerLink="/cart">
-                        <img class="cartimg" src="../../../assets/images/644930-200.png" alt="">
+                        
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_934_129)">
+    <path d="M18.6289 7.75H6.37112C5.31819 7.75 4.44559 8.56637 4.37555 9.61696L3.64222 20.617C3.56526 21.7713 4.48086 22.75 5.63778 22.75H19.3622C20.5192 22.75 21.4348 21.7713 21.3578 20.617L20.6245 9.61696C20.5544 8.56637 19.6818 7.75 18.6289 7.75Z" stroke="black" stroke-width="1.5"/>
+    <path d="M16.5 10.75V6.75C16.5 4.54086 14.7091 2.75 12.5 2.75C10.2909 2.75 8.5 4.54086 8.5 6.75V10.75" stroke="black" stroke-width="1.5" stroke-linecap="square"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_934_129">
+    <rect width="24" height="24" fill="white" transform="translate(0.5 0.75)"/>
+    </clipPath>
+    </defs>
+    </svg>
                     </a>
                 </li>
                 <li class="nav-item" *ngIf='!isloggedin()'>
