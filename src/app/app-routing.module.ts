@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'thankyou', component: ThankyouComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent, canActivate: [AdminGuard]},
+  {path:'dashboard',component:DashboardComponent, canActivate:[AuthGuard] },
   {path:'addproduct',component:AddProductsComponent, canActivate: [AdminGuard]},
   {path:'details',component:ProductDetailsComponent},
   {path:'confirm-payment',component:ConfirmpayentComponent,canActivate: [AuthGuard]},
