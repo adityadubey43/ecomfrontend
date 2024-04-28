@@ -15,7 +15,8 @@ body {
     /* background-color: black; */
     font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
-  color: #04322f;
+  background-color: #000000;
+  color: white;
 }
 
 * {

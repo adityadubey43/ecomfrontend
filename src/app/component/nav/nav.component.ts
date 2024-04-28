@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
 
   @Output() Darkmode = new EventEmitter<boolean>();
 
-  darkmode = false;
+  darkmode = true;
   darkl: boolean | undefined;
   setlogout = true;
 
