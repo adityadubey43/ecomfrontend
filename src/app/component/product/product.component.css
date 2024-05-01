@@ -3,3 +3,7 @@
     left: 20px;
     bottom: 10px;
 }
+
+li{
+    list-style-type:none;
+}

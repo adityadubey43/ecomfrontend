@@ -17,15 +17,33 @@ export class ProductComponent implements OnInit {
   constructor(private router: Router, private userservice: UserService , private authguardservices:AuthGuardService) { }
 
   products: any;
+  categories: string[] = [];
+  selectedCategory: string;
 
   getProducts() {
-    this.userservice.displayProducts().subscribe((resultData: any) => {
-      this.products = resultData;
-      // console.log(this.products);
-    }, (error) => {
-      console.error('Error fetching products:', error);
-      // Handle error, show error message, etc.
+    this.userservice.displayProducts().subscribe(
+      (resultData: any) => {
+        this.products = resultData;
+        this.categories = this.extractCategories(resultData);
+        this.selectedCategory = this.categories[0];
+      },
+      (error) => {
+        console.error('Error fetching products:', error);
+        // Handle error, show error message, etc.
+      }
+    );
+  }
+  extractCategories(products: any[]): string[] {
+    const categories: string[] = [];
+    products.forEach((product) => {
+      if (!categories.includes(product.category)) {
+        categories.push(product.category);
+      }
     });
+    return categories;
+  }
+  filterProductsByCategory(category: string) {
+    this.selectedCategory = category;
   }
   buyProduct(product: { id: any; }) {
     // Navigate to the product details component

@@ -1,30 +1,36 @@
-
-
 <div class="container margin-top-100px">
-    <h3 id="services" class="text-center">Products</h3>
+  <h3 id="services" class="text-center">Products</h3>
 </div>
-
-<div class="product-container">
-    <div *ngFor="let product of products" class="card">
+<div class="product-container ">
+  <div>
+    <ul class="d-flex">
+      <li
+        class="mx-2 mt-3"
+        *ngFor="let category of categories"
+        (click)="filterProductsByCategory(category)"
+      >
+        <div class="btn btn-primary">{{ category }}</div>
+      </li>
+    </ul>
+  </div>
+    <div *ngFor="let product of products">
+      <div
+        *ngIf="!selectedCategory || product.category === selectedCategory"
+        class="card "
+      >
         <div class="product-image">
-            <img [src]="product.productImages[0]" alt="Product Image" />
+          <img [src]="product.productImages[0]" alt="Product Image" />
         </div>
         <div class="product-details">
-            <h2>{{ product.productName }}</h2>
-            <p>{{ product.productDesc }}</p> 
-            <p><strong>Category:</strong> {{ product.category }}</p>
-            <p><strong>Discount:</strong> Get Flat 10% OFF</p>
+          <h2>{{ product.productName }}</h2>
+          <p>{{ product.productDesc }}</p>
+          <p><strong>Category:</strong> {{ product.category }}</p>
+          <p><strong>Discount:</strong> Get Flat 10% OFF</p>
         </div>
-        <!-- <div>
-            <button (click)="buyProduct(product)" class="btn btn-primary byu-button">Buy Now</button>
-        </div>
-        <div>
-            <button (click)="addtocart(product)" class="btn btn-primary mt-2 byu-button">Add To Cart</button>
-        </div> -->
+      </div>
     </div>
-</div>
 
-<!-- <div class="container">
+    <!-- <div class="container">
     <div *ngFor="let product of products" class="card-service">
         <div class="card">
             <div class="image-container">
@@ -42,3 +48,5 @@
         </div>
     </div>
 </div> -->
+  
+</div>
