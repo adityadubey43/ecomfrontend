@@ -23,15 +23,17 @@
 
 .product-details h2 {
     margin-top: 0;
-    color: #333;
+    color: #0f0f0f;
 }
 
 .product-details p {
     margin: 5px 0;
+    color: #0f0f0f;
 }
 
 .product-details strong {
     font-weight: bold;
+    color: #0f0f0f;
 }
 
 .product-details button {
@@ -45,4 +47,7 @@
 
 .product-details button:hover {
     background-color: #0056b3;
+}
+p{
+    color: black;
 }

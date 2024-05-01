@@ -16,7 +16,7 @@
     <div *ngFor="let product of products">
       <div
         *ngIf="!selectedCategory || product.category === selectedCategory"
-        class="card "
+        class="card " (click)="buyProduct(product)"
       >
         <div class="product-image">
           <img [src]="product.productImages[0]" alt="Product Image" />
